@@ -1,12 +1,9 @@
-﻿using MiniBicks.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MiniBicks.Entities;
+using MiniBicks.EntityFramework;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using MiniBicks;
-using MiniBicks.EntityFramework;
 using System.Linq;
-using MiniBicks.Entities.Enum;
-using Microsoft.EntityFrameworkCore;
 
 namespace MiniBicks.Services
 {
@@ -22,14 +19,22 @@ namespace MiniBicks.Services
             return result;
         }
 
-        public bool Create(User user, Adresse adresse)
+        public bool CreateOrUpdate(User user, Adresse adresse)
         {
             bool result = false;
             using(var db = new MiniBicksContext())
             {
-                db.Adresses.Add(adresse);
-                user.Adresse = adresse;
-                db.Users.Add(user);
+                
+                if (user.ID_User == Guid.Empty || user.ID_User == null)
+                {
+                    db.Adresses.Add(adresse);
+                    user.Adresse = adresse;
+                    db.Users.Add(user);
+                }
+                else
+                {
+                    db.Entry(user).State = EntityState.Modified;
+                }
                 result = db.SaveChanges() > 1;
             }
             return result;

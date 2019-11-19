@@ -13,17 +13,19 @@
             <th>Prenom</th>
             <th>Role</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (User user in Model.Users)
         {
-            <tr>
-                <td>@user.Nom</td>
-                <td>@user.Prenom</td>
-                <td>@user.RoleEnum</td>
-                <td><a asp-area="" asp-page="/User/Detail" asp-route-idUser="@user.ID_User">Détail</a></td>
-            </tr>
+        <tr>
+            <td>@user.Nom</td>
+            <td>@user.Prenom</td>
+            <td>@user.RoleEnum</td>
+            <td><a asp-area="" asp-page="/User/Detail" asp-route-idUser="@user.ID_User">Détail</a></td>
+            <td><a asp-area="" asp-page="/User/Edit" asp-route-idUser="@user.ID_User">Modifier</a></td>
+        </tr>
         }
     </tbody>
     </table>

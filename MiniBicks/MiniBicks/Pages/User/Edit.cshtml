@@ -1,0 +1,41 @@
+﻿@page
+@model MiniBicks.Pages.User.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<form method="post">
+    <input asp-for="User.ID_User" type="hidden"/>
+
+    <label asp-for="User.Nom"></label>
+    <input asp-for="User.Nom" />
+    <br />
+    <label asp-for="User.Prenom"></label>
+    <input asp-for="User.Prenom" />
+    <br />
+    <label asp-for="User.Adresse.NumeroRue"></label>
+    <input asp-for="User.Adresse.NumeroRue" />
+    <br />
+    <label asp-for="User.Adresse.Rue"></label>
+    <input asp-for="User.Adresse.Rue" />
+    <br />
+    <label asp-for="User.Adresse.CodePostal"></label>
+    <input asp-for="User.Adresse.CodePostal" />
+    <br />
+    <label asp-for="User.Adresse.Ville"></label>
+    <input asp-for="User.Adresse.Ville" />
+    <br />
+    <label asp-for="User.Adresse.PaysEnum"></label>
+    <select asp-for="User.Adresse.PaysEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.PaysEnum>()">
+        <option selected="selected" value=""></option>
+    </select>
+    <br />
+    <label asp-for="User.RoleEnum">Role utilisateur</label>
+    <select asp-for="User.RoleEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.RoleEnum>()">
+        <option selected="selected" value=""></option>
+    </select>
+
+    <input type="submit" />
+</form>

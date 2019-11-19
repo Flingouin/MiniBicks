@@ -9,18 +9,16 @@ using MiniBicks.Services;
 
 namespace MiniBicks.Pages.User
 {
-    public class AddModel : PageModel
+    public class EditModel : PageModel
     {
         public Entities.User User { get; set; }
-        public Adresse Adresse { get; set; }
-        public void OnGet()
+        public void OnGet(Guid idUser)
         {
-            
+            User = new UserService().Get(idUser);
         }
-        
-        public ActionResult OnPost(MiniBicks.Entities.User user, Adresse adresse)
+        public ActionResult OnPost(Entities.User user)
         {
-            new UserService().CreateOrUpdate(user, adresse);
+            new UserService().CreateOrUpdate(user, user.Adresse);
             return Redirect("/User/Index");
         }
     }
