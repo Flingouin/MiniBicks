@@ -11,7 +11,11 @@
 <p>@Model.User.Adresse.NumeroRue @Model.User.Adresse.Rue</p>
 <p>@Model.User.Adresse.CodePostal @Model.User.Adresse.Ville</p>
 <p>Pays : @Model.User.Adresse.PaysEnum</p>
-@if (Model.User.ListeConge != null)
+@if(Model.User.Responsable != null)
+{
+    <p>Responsable : @Model.User.Responsable.Nom @Model.User.Responsable.Prenom</p>
+}
+@if (Model.User.ListeConge.Count != 0)
 {
 <table>
     <thead>
