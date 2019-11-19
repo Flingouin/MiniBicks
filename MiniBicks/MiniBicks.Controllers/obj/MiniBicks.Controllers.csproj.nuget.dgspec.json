@@ -21,17 +21,20 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks\\MiniBicks.csproj": {
-                "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks\\MiniBicks.csproj"
+              "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj": {
+                "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj"
+              },
+              "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Services\\MiniBicks.Services.csproj": {
+                "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Services\\MiniBicks.Services.csproj"
               }
             }
           }
@@ -43,15 +46,7 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
+        "netcoreapp3.0": {
           "imports": [
             "net461",
             "net462",
@@ -62,18 +57,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks\\MiniBicks.csproj": {
+    "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks\\MiniBicks.csproj",
-        "projectName": "MiniBicks",
-        "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks\\MiniBicks.csproj",
+        "projectUniqueName": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj",
+        "projectName": "MiniBicks.Entities",
+        "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj",
         "packagesPath": "C:\\Users\\Fling\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks\\obj\\",
+        "outputPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -102,16 +102,6 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.0-preview3.19554.8, )"
-            },
-            "jQuery": {
-              "target": "Package",
-              "version": "[3.4.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -123,9 +113,61 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Services\\MiniBicks.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Services\\MiniBicks.Services.csproj",
+        "projectName": "MiniBicks.Services",
+        "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Services\\MiniBicks.Services.csproj",
+        "packagesPath": "C:\\Users\\Fling\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fling\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

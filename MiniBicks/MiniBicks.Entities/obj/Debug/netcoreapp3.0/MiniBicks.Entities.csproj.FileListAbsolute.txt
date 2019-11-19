@@ -1,0 +1,8 @@
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\bin\Debug\netcoreapp3.0\MiniBicks.Entities.deps.json
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\bin\Debug\netcoreapp3.0\MiniBicks.Entities.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\bin\Debug\netcoreapp3.0\MiniBicks.Entities.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netcoreapp3.0\MiniBicks.Entities.csprojAssemblyReference.cache
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netcoreapp3.0\MiniBicks.Entities.AssemblyInfoInputs.cache
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netcoreapp3.0\MiniBicks.Entities.AssemblyInfo.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netcoreapp3.0\MiniBicks.Entities.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netcoreapp3.0\MiniBicks.Entities.pdb

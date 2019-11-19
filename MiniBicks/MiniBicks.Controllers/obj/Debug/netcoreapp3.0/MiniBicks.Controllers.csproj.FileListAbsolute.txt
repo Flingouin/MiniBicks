@@ -1,0 +1,13 @@
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Controllers.deps.json
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Controllers.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Controllers.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Entities.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Services.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Entities.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\bin\Debug\netcoreapp3.0\MiniBicks.Services.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\obj\Debug\netcoreapp3.0\MiniBicks.Controllers.csprojAssemblyReference.cache
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\obj\Debug\netcoreapp3.0\MiniBicks.Controllers.AssemblyInfoInputs.cache
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\obj\Debug\netcoreapp3.0\MiniBicks.Controllers.AssemblyInfo.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\obj\Debug\netcoreapp3.0\MiniBicks.Controllers.csproj.CopyComplete
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\obj\Debug\netcoreapp3.0\MiniBicks.Controllers.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Controllers\obj\Debug\netcoreapp3.0\MiniBicks.Controllers.pdb
