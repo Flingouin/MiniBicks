@@ -32,7 +32,7 @@
                 <td>@conge.DateFin.ToShortDateString()</td>
                 <td>@conge.TypeCongeEnum</td>
                 <td>@(new CongeValiditeEnumHelper().GetFriendlyEnum(conge.CongeValiditeEnum))</td>
-                
+                <td><a asp-area="" asp-page="/Conge/ValideOrRefuseConge" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
             </tr>
         }
 

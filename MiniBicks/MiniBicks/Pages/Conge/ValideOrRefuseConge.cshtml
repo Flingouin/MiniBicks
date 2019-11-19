@@ -4,5 +4,22 @@
     ViewData["Title"] = "ValideOrRefuseConge";
 }
 
-<h1>ValideOrRefuseConge</h1>
+    <h2>Validation du congé</h2>
+
+    <form method="post">
+        <input asp-for="Conge.ID_User" type="hidden" />
+        <input asp-for="Conge.ID_Conge" type="hidden" />
+        <input asp-for="Conge.DateDebut" type="hidden" />
+        <input asp-for="Conge.DateFin" type="hidden" />
+        <input asp-for="Conge.TypeCongeEnum" type="hidden" />
+
+        <p>Date de début @Model.Conge.DateDebut.ToShortDateString()</p>
+        <p>Date de fin @Model.Conge.DateFin.ToShortDateString()</p>
+        <p>Type de congé @Model.Conge.TypeCongeEnum</p>
+        <br />
+        <label asp-for="Conge.CongeValiditeEnum"></label>
+        <select asp-for="Conge.CongeValiditeEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.CongeValiditeEnum>()">
+        </select>
+        <input type="submit">
+    </form>
 

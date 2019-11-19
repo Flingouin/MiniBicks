@@ -22,7 +22,8 @@ namespace MiniBicks.Pages.Conge
 
         public ActionResult OnPost(Entities.User user, Entities.Conge conge)
         {
-            new CongeService().Create(user.ID_User, conge);
+            conge.ID_User = user.ID_User;
+            new CongeService().Create(conge);
             return Redirect("/User/Index");
         }
     }
