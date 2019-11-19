@@ -7,7 +7,10 @@
 <h1>Edit</h1>
 
 <form method="post">
-    <input asp-for="User.ID_User" type="hidden"/>
+    <input asp-for="User.ID_User" type="hidden" />
+    <input asp-for="User.ID_Responsable" type="hidden" />
+    <input asp-for="User.ID_Adresse" type="hidden" />
+    <input asp-for="User.Adresse.ID_Adresse" type="hidden" />
 
     <label asp-for="User.Nom"></label>
     <input asp-for="User.Nom" />

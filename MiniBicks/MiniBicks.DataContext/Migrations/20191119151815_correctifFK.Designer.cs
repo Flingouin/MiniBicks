@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniBicks.EntityFramework;
 
 namespace MiniBicks.DataContext.Migrations
 {
     [DbContext(typeof(MiniBicksContext))]
-    partial class MiniBicksContextModelSnapshot : ModelSnapshot
+    [Migration("20191119151815_correctifFK")]
+    partial class correctifFK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,6 +88,9 @@ namespace MiniBicks.DataContext.Migrations
                     b.Property<string>("Prenom")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("ResponsableID_User")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("RoleEnum")
                         .HasColumnType("int");
 
@@ -93,7 +98,7 @@ namespace MiniBicks.DataContext.Migrations
 
                     b.HasIndex("ID_Adresse");
 
-                    b.HasIndex("ID_Responsable");
+                    b.HasIndex("ResponsableID_User");
 
                     b.ToTable("Users");
                 });
@@ -108,7 +113,7 @@ namespace MiniBicks.DataContext.Migrations
 
                     b.HasOne("MiniBicks.Entities.User", "Responsable")
                         .WithMany()
-                        .HasForeignKey("ID_Responsable");
+                        .HasForeignKey("ResponsableID_User");
                 });
 #pragma warning restore 612, 618
         }

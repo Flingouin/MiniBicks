@@ -33,6 +33,7 @@ namespace MiniBicks.Services
                 }
                 else
                 {
+                    db.Entry(user.Adresse).State = EntityState.Modified;
                     db.Entry(user).State = EntityState.Modified;
                 }
                 result = db.SaveChanges() > 1;

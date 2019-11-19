@@ -14,9 +14,11 @@ namespace MiniBicks.Entities
         public Guid ID_User { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
+        [ForeignKey("Adresse")]
         public Guid ID_Adresse { get; set; }
         [Display(Name ="Role utilisateur")]
         public RoleEnum RoleEnum { get; set; }
+        [ForeignKey("Responsable")]
         public Guid? ID_Responsable { get; set; }
 
         public virtual Adresse Adresse { get; set; }
