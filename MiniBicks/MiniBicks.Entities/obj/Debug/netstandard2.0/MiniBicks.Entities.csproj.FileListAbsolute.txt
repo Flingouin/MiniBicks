@@ -1,5 +1,0 @@
-D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\bin\Debug\netstandard2.0\MiniBicks.Entities.deps.json
-D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\bin\Debug\netstandard2.0\MiniBicks.Entities.dll
-D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netstandard2.0\MiniBicks.Entities.csprojAssemblyReference.cache
-D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netstandard2.0\MiniBicks.Entities.AssemblyInfoInputs.cache
-D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Entities\obj\Debug\netstandard2.0\MiniBicks.Entities.AssemblyInfo.cs
