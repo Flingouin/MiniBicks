@@ -14,8 +14,13 @@ namespace MiniBicks.Entities
         public Guid ID_User { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public Adresse Adresse { get; set; }
+        public Guid ID_Adresse { get; set; }
+        [Display(Name ="Role utilisateur")]
         public RoleEnum RoleEnum { get; set; }
-        public User Responsable { get; set; }
+        public Guid? ID_Responsable { get; set; }
+
+        public virtual Adresse Adresse { get; set; }
+        public virtual User Responsable { get; set; }
+
     }
 }

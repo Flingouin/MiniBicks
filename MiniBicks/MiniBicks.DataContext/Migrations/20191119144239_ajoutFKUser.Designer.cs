@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniBicks.EntityFramework;
 
 namespace MiniBicks.DataContext.Migrations
 {
     [DbContext(typeof(MiniBicksContext))]
-    partial class MiniBicksContextModelSnapshot : ModelSnapshot
+    [Migration("20191119144239_ajoutFKUser")]
+    partial class ajoutFKUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -17,10 +17,10 @@ namespace MiniBicks.Pages.User
         {
             
         }
-
+        
         public ActionResult OnPost(MiniBicks.Entities.User user, Adresse adresse)
         {
-            new UserService().Create(user);
+            new UserService().Create(user, adresse);
             return Redirect("/User/Index");
         }
     }

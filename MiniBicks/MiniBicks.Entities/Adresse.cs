@@ -16,6 +16,7 @@ namespace MiniBicks.Entities
         public string Rue { get; set; }
         public int CodePostal { get; set; }
         public string Ville { get; set; }
+        [Display(Name = "Pays")]
         public PaysEnum PaysEnum { get; set; }
     }
 }

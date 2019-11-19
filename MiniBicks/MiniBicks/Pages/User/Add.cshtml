@@ -8,15 +8,33 @@
 <h1>Add</h1>
 
 <form method="post">
-    <input asp-for="User.Nom" /><br />
+    <label asp-for="User.Nom"></label>
+    <input asp-for="User.Nom" />
+    <br />
+    <label asp-for="User.Prenom"></label>
     <input asp-for="User.Prenom" />
+    <br />
+    <label asp-for="Adresse.NumeroRue"></label>
     <input asp-for="Adresse.NumeroRue" />
-    <input asp-for="User.Prenom" />
-    <input asp-for="User.Prenom" />
-    <input asp-for="User.Prenom" />
-    <input asp-for="User.Prenom" />
-    <input asp-for="User.Prenom" />
-    <input asp-for="User.Prenom" />
-    <input asp-for="User.Prenom" />
+    <br />
+    <label asp-for="Adresse.Rue"></label>
+    <input asp-for="Adresse.Rue" />
+    <br />
+    <label asp-for="Adresse.CodePostal"></label>
+    <input asp-for="Adresse.CodePostal" />
+    <br />
+    <label asp-for="Adresse.Ville"></label>
+    <input asp-for="Adresse.Ville" />
+    <br />
+    <label asp-for="Adresse.PaysEnum"></label>
+    <select asp-for="Adresse.PaysEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.PaysEnum>()">
+        <option selected="selected" value=""></option>
+    </select>
+    <br />
+    <label asp-for="User.RoleEnum">Role utilisateur</label>
+    <select asp-for="User.RoleEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.RoleEnum>()">
+        <option selected="selected" value=""></option>
+    </select>
+
     <input type="submit" />
 </form>

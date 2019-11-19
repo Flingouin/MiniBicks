@@ -1,0 +1,15 @@
+﻿@page
+@model MiniBicks.Pages.User.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+
+<p>@Model.User.Nom</p>
+<p>@Model.User.Prenom</p>
+<p>@Model.User.Adresse.NumeroRue @Model.User.Adresse.Rue</p>
+<p>@Model.User.Adresse.CodePostal @Model.User.Adresse.Ville</p>
+<p>@Model.User.Adresse.PaysEnum</p>
+<p>@Model.User.RoleEnum</p>
+

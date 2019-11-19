@@ -6,10 +6,27 @@
 }
 
 <h1>Index</h1>
-@foreach (User user in Model.Users)
-{
-    <h1>User @user.Nom</h1>
-}
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (User user in Model.Users)
+        {
+            <tr>
+                <td>@user.Nom</td>
+                <td>@user.Prenom</td>
+                <td>@user.RoleEnum</td>
+                <td><a asp-area="" asp-page="/User/Detail" asp-route-idUser="@user.ID_User">Détail</a></td>
+            </tr>
+        }
+    </tbody>
+    </table>
 
-<a class="nav-link text-dark" asp-area="" asp-page="/User/Add">Créer un nouveau utilisateur</a>
+    <a class="nav-link text-dark" asp-area="" asp-page="/User/Add">Créer un nouveau utilisateur</a>
 

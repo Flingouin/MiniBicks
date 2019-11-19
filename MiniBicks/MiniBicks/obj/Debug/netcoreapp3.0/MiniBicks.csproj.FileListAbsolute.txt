@@ -149,3 +149,4 @@ D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.dll
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.pdb
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Add.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Detail.cshtml.g.cs
