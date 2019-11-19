@@ -13,7 +13,7 @@ namespace MiniBicks.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ID_Adresse { get; set; }
         public int NumeroRue { get; set; }
-        public string Adrese { get; set; }
+        public string Rue { get; set; }
         public int CodePostal { get; set; }
         public string Ville { get; set; }
         public PaysEnum PaysEnum { get; set; }

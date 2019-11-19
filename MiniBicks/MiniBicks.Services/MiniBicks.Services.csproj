@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiniBicks.DataContext\MiniBicks.DataContext.csproj" />
+    <ProjectReference Include="..\MiniBicks.Entities\MiniBicks.Entities.csproj" />
+  </ItemGroup>
 
 </Project>

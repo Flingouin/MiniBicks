@@ -1,0 +1,13 @@
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.deps.json
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\obj\Debug\netcoreapp3.0\MiniBicks.DataContext.csprojAssemblyReference.cache
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\obj\Debug\netcoreapp3.0\MiniBicks.DataContext.AssemblyInfoInputs.cache
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\obj\Debug\netcoreapp3.0\MiniBicks.DataContext.AssemblyInfo.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.runtimeconfig.json
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.runtimeconfig.dev.json
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.Entities.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.Entities.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\obj\Debug\netcoreapp3.0\MiniBicks.DataContext.csproj.CopyComplete
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\obj\Debug\netcoreapp3.0\MiniBicks.DataContext.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.DataContext\obj\Debug\netcoreapp3.0\MiniBicks.DataContext.pdb

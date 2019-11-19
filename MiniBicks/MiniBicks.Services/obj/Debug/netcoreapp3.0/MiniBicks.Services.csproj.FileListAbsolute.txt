@@ -6,3 +6,8 @@ D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\obj\Debug\netcoreapp3.0\MiniBic
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\obj\Debug\netcoreapp3.0\MiniBicks.Services.AssemblyInfo.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\obj\Debug\netcoreapp3.0\MiniBicks.Services.dll
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\obj\Debug\netcoreapp3.0\MiniBicks.Services.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\bin\Debug\netcoreapp3.0\MiniBicks.Entities.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\bin\Debug\netcoreapp3.0\MiniBicks.DataContext.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\bin\Debug\netcoreapp3.0\MiniBicks.Entities.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks.Services\obj\Debug\netcoreapp3.0\MiniBicks.Services.csproj.CopyComplete
