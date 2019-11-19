@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -22,12 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Helpers\MiniBicks.Helpers.csproj" />
     <ProjectReference Include="..\MiniBicks.Entities\MiniBicks.Entities.csproj" />
     <ProjectReference Include="..\MiniBicks.Services\MiniBicks.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Conge\" />
     <Folder Include="Pages\Home\" />
   </ItemGroup>
 

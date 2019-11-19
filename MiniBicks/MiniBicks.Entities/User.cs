@@ -24,5 +24,7 @@ namespace MiniBicks.Entities
         public virtual Adresse Adresse { get; set; }
         public virtual User Responsable { get; set; }
 
+        public virtual List<Conge> ListeConge { get; set; }
+
     }
 }

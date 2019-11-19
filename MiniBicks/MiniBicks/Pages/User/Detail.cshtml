@@ -1,14 +1,41 @@
 ﻿@page
 @model MiniBicks.Pages.User.DetailModel
+@using MiniBicks.Helpers.Enum;
 @{
     ViewData["Title"] = "Detail";
 }
 
-    <h1>@Model.User.Nom @Model.User.Prenom</h1>
-    <p>@Model.User.RoleEnum</p>
+<h1>@Model.User.Nom @Model.User.Prenom</h1>
+<p>@Model.User.RoleEnum</p>
 <p>Adresse :</p>
 <p>@Model.User.Adresse.NumeroRue @Model.User.Adresse.Rue</p>
 <p>@Model.User.Adresse.CodePostal @Model.User.Adresse.Ville</p>
 <p>Pays : @Model.User.Adresse.PaysEnum</p>
+@if (Model.User.ListeConge != null)
+{
+<table>
+    <thead>
+        <tr>
+            <th>Date début</th>
+            <th>Date Fin</th>
+            <th>Type du congé</th>
+            <th>Etat de la demande</th>
+        </tr>
+    </thead>
+    <tbody>
 
+        @foreach (Entities.Conge conge in Model.User.ListeConge)
+        {
+            <tr>
+                <td>@conge.DateDebut.ToShortDateString()</td>
+                <td>@conge.DateFin.ToShortDateString()</td>
+                <td>@conge.TypeCongeEnum</td>
+                <td>@(new CongeValiditeEnumHelper().GetFriendlyEnum(conge.CongeValiditeEnum))</td>
+            </tr>
+        }
 
+    </tbody>
+</table>
+}
+
+<a asp-area="" asp-page="/Conge/Create" asp-route-idUser="@Model.User.ID_User">Demander un congé</a>

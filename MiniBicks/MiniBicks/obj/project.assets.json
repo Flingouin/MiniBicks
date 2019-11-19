@@ -2612,6 +2612,19 @@
           "bin/placeholder/MiniBicks.Entities.dll": {}
         }
       },
+      "MiniBicks.Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "MiniBicks.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniBicks.Helpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniBicks.Helpers.dll": {}
+        }
+      },
       "MiniBicks.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -8381,6 +8394,11 @@
       "path": "../MiniBicks.Entities/MiniBicks.Entities.csproj",
       "msbuildProject": "../MiniBicks.Entities/MiniBicks.Entities.csproj"
     },
+    "MiniBicks.Helpers/1.0.0": {
+      "type": "project",
+      "path": "../Helpers/MiniBicks.Helpers.csproj",
+      "msbuildProject": "../Helpers/MiniBicks.Helpers.csproj"
+    },
     "MiniBicks.Services/1.0.0": {
       "type": "project",
       "path": "../MiniBicks.Services/MiniBicks.Services.csproj",
@@ -8396,6 +8414,7 @@
       "Microsoft.Extensions.Logging.Debug >= 3.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0",
       "MiniBicks.Entities >= 1.0.0",
+      "MiniBicks.Helpers >= 1.0.0",
       "MiniBicks.Services >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 4.6.0",
       "jQuery >= 3.4.1"
@@ -8431,6 +8450,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "D:\\GitHub\\MiniBicks\\MiniBicks\\Helpers\\MiniBicks.Helpers.csproj": {
+              "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\Helpers\\MiniBicks.Helpers.csproj"
+            },
             "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj": {
               "projectPath": "D:\\GitHub\\MiniBicks\\MiniBicks\\MiniBicks.Entities\\MiniBicks.Entities.csproj"
             },

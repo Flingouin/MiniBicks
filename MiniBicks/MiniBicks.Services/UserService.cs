@@ -46,7 +46,7 @@ namespace MiniBicks.Services
             User result = new User();
             using (var db = new MiniBicksContext())
             {
-                result = db.Users.Include(u => u.Adresse).FirstOrDefault(u => u.ID_User == idUser);
+                result = db.Users.Include(u => u.ListeConge).Include(u => u.Adresse).FirstOrDefault(u => u.ID_User == idUser);
             }
             return result;
         }

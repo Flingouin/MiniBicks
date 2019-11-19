@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "MiniBicks.Helpers/1.0.0": {
+        "dependencies": {
+          "MiniBicks.Entities": "1.0.0"
+        },
+        "runtime": {
+          "MiniBicks.Helpers.dll": {}
+        }
+      },
+      "MiniBicks.Entities/1.0.0": {
+        "runtime": {
+          "MiniBicks.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiniBicks.Helpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiniBicks.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

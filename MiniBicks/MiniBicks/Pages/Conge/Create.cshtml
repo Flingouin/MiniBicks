@@ -1,0 +1,24 @@
+﻿@page
+@model MiniBicks.Pages.Conge.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Demande de conge</h1>
+<form method="post">
+    <input asp-for="User.ID_User"  type="hidden"/>
+
+    <label asp-for="Conge.CongeValiditeEnum"></label>
+    <select asp-for="Conge.CongeValiditeEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.TypeCongeEnum>()">
+        <option selected="selected" value=""></option>
+    </select>
+    <br />
+
+    <label asp-for="Conge.DateDebut"></label>
+    <input asp-for="Conge.DateDebut" />
+    <br />
+    <label asp-for="Conge.DateFin"></label>
+    <input asp-for="Conge.DateFin" />
+    <br />
+    <input type="submit" />
+</form>

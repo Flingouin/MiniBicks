@@ -51,21 +51,46 @@ namespace MiniBicks.DataContext.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("CongeValiditeEnum")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DateDebut")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateFin")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("EstValide")
-                        .HasColumnType("bit");
+                    b.Property<Guid>("ID_User")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TypeCongeEnum")
                         .HasColumnType("int");
 
                     b.HasKey("ID_Conge");
 
+                    b.HasIndex("ID_User");
+
                     b.ToTable("Conges");
+                });
+
+            modelBuilder.Entity("MiniBicks.Entities.DureeConge", b =>
+                {
+                    b.Property<Guid>("ID_DureeConge")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Duree")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PaysEnum")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TypeCongeEnum")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID_DureeConge");
+
+                    b.ToTable("DureeConges");
                 });
 
             modelBuilder.Entity("MiniBicks.Entities.User", b =>
@@ -96,6 +121,15 @@ namespace MiniBicks.DataContext.Migrations
                     b.HasIndex("ID_Responsable");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("MiniBicks.Entities.Conge", b =>
+                {
+                    b.HasOne("MiniBicks.Entities.User", "User")
+                        .WithMany("ListeConge")
+                        .HasForeignKey("ID_User")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MiniBicks.Entities.User", b =>

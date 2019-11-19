@@ -151,3 +151,7 @@ D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.DataCo
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Add.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Detail.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Edit.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\Create.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\ValideOrRefuseConge.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.Helpers.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.Helpers.pdb

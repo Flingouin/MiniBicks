@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBicks.Services", "MiniB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBicks.DataContext", "MiniBicks.DataContext\MiniBicks.DataContext.csproj", "{40CFEF3C-34AC-4861-BCC5-345837D8274A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBicks.Helpers", "Helpers\MiniBicks.Helpers.csproj", "{3A63967E-657A-406E-9E92-715F5E9B0FF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{40CFEF3C-34AC-4861-BCC5-345837D8274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40CFEF3C-34AC-4861-BCC5-345837D8274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40CFEF3C-34AC-4861-BCC5-345837D8274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A63967E-657A-406E-9E92-715F5E9B0FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A63967E-657A-406E-9E92-715F5E9B0FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A63967E-657A-406E-9E92-715F5E9B0FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A63967E-657A-406E-9E92-715F5E9B0FF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

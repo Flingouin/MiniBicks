@@ -12,6 +12,7 @@ namespace MiniBicks.EntityFramework
         public DbSet<User> Users { get; set; }
         public DbSet<Conge> Conges { get; set; }
         public DbSet<Adresse> Adresses { get; set; }
+        public DbSet<DureeConge> DureeConges { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
