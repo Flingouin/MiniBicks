@@ -1,15 +1,33 @@
 ﻿@page
 @model MiniBicks.Pages.Conge.CreateModel
+@using Entities.Enum;
 @{
     ViewData["Title"] = "Create";
 }
+@{ 
+    double CPRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.CP).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.CP).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
+    double RTTRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.RTT).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.RTT).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
+    double DecesRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Deces).FirstOrDefault().Duree -     Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Deces).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
+    double MarriageRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Marriage).FirstOrDefault().Duree -     Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Marriage).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
+    double NaissanceRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Naissance).FirstOrDefault().Duree -     Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Naissance).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
+    double MaterniteRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Maternite).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Maternite).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
+    double PaterniteRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Paternite).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Paternite).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
 
+}
 <h1>Demande de conge</h1>
+<p>Jours CP restant : @CPRestant</p>
+<p>Jours RTT restant : @RTTRestant</p>
+<p>Jours Deces restant : @DecesRestant</p>
+<p>Jours Marriage restant : @MarriageRestant</p>
+<p>Jours Naissance restant : @NaissanceRestant</p>
+<p>Jours Maternite restant : @MaterniteRestant</p>
+<p>Jours Paternite restant : @PaterniteRestant</p>
+
 <form method="post">
     <input asp-for="User.ID_User"  type="hidden"/>
 
     <label asp-for="Conge.CongeValiditeEnum"></label>
-    <select asp-for="Conge.CongeValiditeEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.TypeCongeEnum>()">
+    <select asp-for="Conge.CongeValiditeEnum" asp-items="Html.GetEnumSelectList<TypeCongeEnum>()">
         <option selected="selected" value=""></option>
     </select>
     <br />
