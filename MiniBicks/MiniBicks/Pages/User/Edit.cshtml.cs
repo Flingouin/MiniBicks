@@ -12,9 +12,12 @@ namespace MiniBicks.Pages.User
     public class EditModel : PageModel
     {
         public Entities.User User { get; set; }
+        public List<Entities.User> ListeUserPossibleresponsable { get; set; }
         public void OnGet(Guid idUser)
         {
-            User = new UserService().Get(idUser);
+            UserService userService = new UserService();
+            User = userService.Get(idUser);
+            ListeUserPossibleresponsable = userService.GetPossibleResponsable(idUser);
         }
         public ActionResult OnPost(Entities.User user)
         {

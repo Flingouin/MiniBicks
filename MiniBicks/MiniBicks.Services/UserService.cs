@@ -4,6 +4,7 @@ using MiniBicks.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MiniBicks.Entities.Enum;
 
 namespace MiniBicks.Services
 {
@@ -50,6 +51,29 @@ namespace MiniBicks.Services
                                  .Include(u => u.ListeConge)
                                  .Include(u => u.Adresse)
                                  .FirstOrDefault(u => u.ID_User == idUser);
+            }
+            return result;
+        }
+        public List<User> GetPossibleResponsable(Guid idUser)
+        {
+            List<User> result = new List<User>();
+            using (var db = new MiniBicksContext())
+            {
+                User userCourant = db.Users.FirstOrDefault(u => u.ID_User == idUser);
+                switch (userCourant.RoleEnum)
+                {
+                    case RoleEnum.Collaborateur:
+                        result = db.Users.Where(u => u.RoleEnum != RoleEnum.Collaborateur).ToList();
+                        break;
+                    case RoleEnum.Manager:
+                        result = db.Users.Where(u => u.RoleEnum != RoleEnum.Collaborateur && u.RoleEnum != RoleEnum.Manager).ToList();
+                        break;
+                    case RoleEnum.ComiteDirection:
+                        result = db.Users.Where(u => u.RoleEnum == RoleEnum.PDG).ToList();
+                        break;
+                    default:
+                        break;
+                }
             }
             return result;
         }

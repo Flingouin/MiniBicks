@@ -37,7 +37,10 @@ namespace MiniBicks.Services
             Conge result = new Conge();
             using (var db = new MiniBicksContext())
             {
-                result = db.Conges.FirstOrDefault(c => c.ID_Conge == idConge);
+                result = db.Conges.Include(c => c.User)
+                                  .Include(c => c.User.Adresse)
+                                  .Include(c => c.User.ListeConge)
+                                  .FirstOrDefault(c => c.ID_Conge == idConge);
             }
             return result;
         }

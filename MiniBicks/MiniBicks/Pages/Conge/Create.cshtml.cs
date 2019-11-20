@@ -24,7 +24,7 @@ namespace MiniBicks.Pages.Conge
         {
             conge.ID_User = user.ID_User;
             new CongeService().Create(conge);
-            return Redirect("/User/Index");
+            return Redirect("/User/Detail?idUser=" + user.ID_User);
         }
     }
 }

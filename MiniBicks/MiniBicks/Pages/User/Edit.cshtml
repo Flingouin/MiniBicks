@@ -8,7 +8,6 @@
 
 <form method="post">
     <input asp-for="User.ID_User" type="hidden" />
-    <input asp-for="User.ID_Responsable" type="hidden" />
     <input asp-for="User.ID_Adresse" type="hidden" />
     <input asp-for="User.Adresse.ID_Adresse" type="hidden" />
 
@@ -39,6 +38,12 @@
     <select asp-for="User.RoleEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.RoleEnum>()">
         <option selected="selected" value=""></option>
     </select>
+    <br />
+    <label asp-for="User.ID_Responsable">Responsable</label>
+    <select asp-for="User.ID_Responsable" asp-items="Model.ListeUserPossibleresponsable.Select(r =>new SelectListItem { Text = r.NomPrenom, Value=r.ID_User.ToString()})">
+        <option selected="selected" value=""></option>
+    </select>
+
 
     <input type="submit" />
 </form>

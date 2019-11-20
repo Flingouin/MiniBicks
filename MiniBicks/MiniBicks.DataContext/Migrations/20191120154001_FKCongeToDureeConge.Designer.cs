@@ -10,8 +10,8 @@ using MiniBicks.EntityFramework;
 namespace MiniBicks.DataContext.Migrations
 {
     [DbContext(typeof(MiniBicksContext))]
-    [Migration("20191119185443_AutoGenGuidDureeCOnge")]
-    partial class AutoGenGuidDureeCOnge
+    [Migration("20191120154001_FKCongeToDureeConge")]
+    partial class FKCongeToDureeConge
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,6 +62,9 @@ namespace MiniBicks.DataContext.Migrations
                     b.Property<DateTime>("DateFin")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid>("ID_DureeConge")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("ID_User")
                         .HasColumnType("uniqueidentifier");
 
@@ -69,6 +72,8 @@ namespace MiniBicks.DataContext.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID_Conge");
+
+                    b.HasIndex("ID_DureeConge");
 
                     b.HasIndex("ID_User");
 
@@ -127,6 +132,12 @@ namespace MiniBicks.DataContext.Migrations
 
             modelBuilder.Entity("MiniBicks.Entities.Conge", b =>
                 {
+                    b.HasOne("MiniBicks.Entities.DureeConge", "DureeConge")
+                        .WithMany()
+                        .HasForeignKey("ID_DureeConge")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("MiniBicks.Entities.User", "User")
                         .WithMany("ListeConge")
                         .HasForeignKey("ID_User")

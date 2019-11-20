@@ -20,6 +20,12 @@ namespace MiniBicks.Entities
         public DateTime DateFin { get; set; }
         [ForeignKey("User")]
         public Guid ID_User { get; set; }
+        [ForeignKey("DureeConge")]
+        public Guid ID_DureeConge { get; set; }
         public virtual User User { get; set; }
+        public virtual DureeConge DureeConge { get; set; }
+
+        [NotMapped]
+        public double DureeDuConge => (DateFin - DateDebut).TotalDays;
     }
 }

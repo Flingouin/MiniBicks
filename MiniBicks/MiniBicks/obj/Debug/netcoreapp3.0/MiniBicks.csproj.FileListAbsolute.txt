@@ -155,3 +155,4 @@ D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Cong
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\ValideOrRefuseConge.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.Helpers.dll
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.Helpers.pdb
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\AutoMapper.dll
