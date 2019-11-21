@@ -17,7 +17,7 @@
     <input asp-for="Frais.FraiEnum" type="hidden" />
     <input asp-for="Frais.DateDeFrais" type="hidden" />
 
-    <p>Date de la demande : @Model.Frais.DateDeFrais</p>
+    <p>Date de la demande : @Model.Frais.DateDeFrais.ToShortDateString()</p>
     <p>Total des frais : @string.Format("{0:C2}",Model.Frais.TotalFrais)</p>
     <p>Type de frais : @(new FraisEnumHelper().GetFriendlyEnum(Model.Frais.FraiEnum))</p>
     <select asp-for="Frais.ValidateEnum" asp-items="ListEnumFraisValidite.Select(lefv => new SelectListItem() { Text = lefv, Value = lefv})"></select>

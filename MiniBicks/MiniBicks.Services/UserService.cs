@@ -23,9 +23,9 @@ namespace MiniBicks.Services
         public bool CreateOrUpdate(User user, Adresse adresse)
         {
             bool result = false;
-            using(var db = new MiniBicksContext())
+            using (var db = new MiniBicksContext())
             {
-                
+
                 if (user.ID_User == Guid.Empty || user.ID_User == null)
                 {
                     db.Adresses.Add(adresse);
@@ -75,6 +75,32 @@ namespace MiniBicks.Services
                     default:
                         break;
                 }
+            }
+            return result;
+        }
+
+        public bool Delete(Guid idUser)
+        {
+            bool result = false;
+            using (var db = new MiniBicksContext())
+            {
+                User user = db.Users
+                                .Include(u => u.Adresse)
+                                .Include(u => u.ListeConge)
+                                .Include(u => u.ListeFrais)
+                                .FirstOrDefault(u => u.ID_User == idUser);
+                user.Responsable = null;
+                user.ID_Responsable = null;
+                List<User> listeUserResponsable = db.Users.Where(u => u.ID_Responsable == user.ID_User).ToList();
+                foreach (var userR in listeUserResponsable)
+                {
+                    userR.ID_Responsable = null;
+                    db.Entry(userR).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                db.Entry(user).State = EntityState.Modified;
+                db.Users.Remove(user);
+                result = db.SaveChanges() > 0;
             }
             return result;
         }

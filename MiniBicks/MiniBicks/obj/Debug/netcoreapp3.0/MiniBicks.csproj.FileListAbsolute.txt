@@ -161,3 +161,4 @@ D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Frai
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\ValideOrRefuse.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Frais\ToRefund.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Frais\ValidateOrRefuse.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Delete.cshtml.g.cs

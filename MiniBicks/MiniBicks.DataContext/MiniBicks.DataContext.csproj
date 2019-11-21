@@ -15,6 +15,8 @@
     <Compile Remove="Migrations\20191121103253_ajoutDateFraisFra.Designer.cs" />
     <Compile Remove="Migrations\20191121103552_ajoutDateFraisFrais.cs" />
     <Compile Remove="Migrations\20191121103552_ajoutDateFraisFrais.Designer.cs" />
+    <Compile Remove="Migrations\20191121151238_removeContraintResponsable.cs" />
+    <Compile Remove="Migrations\20191121151238_removeContraintResponsable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

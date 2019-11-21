@@ -1,0 +1,12 @@
+﻿@page
+@model MiniBicks.Pages.User.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Confirmer votre suppression</h1>
+<p>Voulez-vous vraiment supprimer @Model.User.NomPrenom ?</p>
+<form method="post">
+    <input asp-for="@Model.User.ID_User" type="hidden"/>
+    <input type="submit" value="Supprimer"/>
+</form>
