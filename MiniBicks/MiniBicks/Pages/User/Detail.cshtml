@@ -61,7 +61,7 @@
             @foreach (Entities.Frai frais in Model.User.ListeFrais)
             {
                 <tr>
-                    <td>@(new FraisValidatiEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
+                    <td>@(new FraisEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
                     <td>@frais.MontantTTC</td>
                     <td>@frais.TVA</td>
                     <td>@frais.TotalFrais</td>

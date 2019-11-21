@@ -17,10 +17,10 @@ namespace MiniBicks.Pages.Frais
             Frais = new FraisService().Get(idFrai);
         }
 
-        public ActionResult Onpost(Entities.Frai frai)
+        public ActionResult Onpost(Entities.Frai frais)
         {
-            new CongeService().Edit(frai);
-            return Redirect("/User/Detail?idUser=" + frai.ID_User);
+            new FraisService().Edit(frais);
+            return Redirect("/Frais/ToRefund");
         }
     }
 }

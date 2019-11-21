@@ -13,14 +13,16 @@ namespace MiniBicks.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ID_Frai { get; set; }
         public FraiEnum FraiEnum { get; set; }
+        public decimal FraisKilometrique { get; set; }
         public decimal MontantTTC { get; set; }
         public decimal TVA { get; set; }
         public ValiditeEnum ValidateEnum { get; set; } = ValiditeEnum.EnAttente;
+        public DateTime DateDeFrais { get; set; } = DateTime.Now;
         [ForeignKey("User")]
         public Guid ID_User { get; set; }
         public virtual User User { get; set; }
 
         [NotMapped]
-        public decimal TotalFrais => FraiEnum == FraiEnum.Voiture ? MontantTTC * 0.33m : MontantTTC;
+        public decimal TotalFrais => Math.Round(FraiEnum == FraiEnum.Voiture ? FraisKilometrique * 0.33m : MontantTTC,2);
     }
 }

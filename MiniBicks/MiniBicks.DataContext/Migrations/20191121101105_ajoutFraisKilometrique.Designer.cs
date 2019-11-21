@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniBicks.EntityFramework;
 
 namespace MiniBicks.DataContext.Migrations
 {
     [DbContext(typeof(MiniBicksContext))]
-    partial class MiniBicksContextModelSnapshot : ModelSnapshot
+    [Migration("20191121101105_ajoutFraisKilometrique")]
+    partial class ajoutFraisKilometrique
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,9 +105,6 @@ namespace MiniBicks.DataContext.Migrations
                     b.Property<Guid>("ID_Frai")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DateDeFrais")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("FraiEnum")
                         .HasColumnType("int");

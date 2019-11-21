@@ -16,11 +16,14 @@
     <span>Type de frais</span>
     <select asp-for="Frais.FraiEnum" asp-items="Html.GetEnumSelectList<FraiEnum>()"></select>
     <br />
-    <span>Montant TTC ou Distance Km</span>
+    <span>Montant TTC</span>
     <input asp-for="Frais.MontantTTC" />
+    <br />
+    <span>Distance en Km</span>
+    <input asp-for="Frais.FraisKilometrique">
     <br />
     <span>Montant TVA</span>
     <input asp-for="Frais.TVA" />
-    <input type="submit"/>
+    <input type="submit" />
 </form>
 

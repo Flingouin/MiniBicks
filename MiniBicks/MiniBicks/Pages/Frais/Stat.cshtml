@@ -1,8 +1,46 @@
 ﻿@page
+@using Entities.Enum;
+@using Helpers.Enum;
 @model MiniBicks.Pages.Frais.StatModel
 @{
     ViewData["Title"] = "Stat";
 }
 
-<h1>Stat</h1>
+<h1>Stat du mois</h1>
+<h2>Par type de frais</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Type de frais</th>
+            <th>Montant total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (KeyValuePair<FraiEnum, decimal> kvp in Model.DicoFrais)
+        {
+            <tr>
+                <td>@(new FraisEnumHelper().GetFriendlyEnum(kvp.Key))</td>
+                <td>@(string.Format("{0:C2}",Math.Round(kvp.Value,2)))</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
+<h2>Par employé</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Utilisateur</th>
+            <th>Montant total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (KeyValuePair<string, decimal> kvp in Model.DicoFraisByUser)
+        {
+            <tr>
+                <td>@kvp.Key</td>
+                <td>@(string.Format("{0:C2}", Math.Round(kvp.Value, 2)))</td>
+            </tr>
+        }
+    </tbody>
+</table>

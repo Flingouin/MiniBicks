@@ -5,7 +5,7 @@ using MiniBicks.Entities.Enum;
 
 namespace MiniBicks.Helpers.Enum
 {
-    public class FraisValidatiEnumHelper
+    public class FraisEnumHelper
     {
         public string GetFriendlyEnum(FraiEnum fraiEnum)
         {

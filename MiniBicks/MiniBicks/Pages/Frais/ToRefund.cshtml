@@ -22,9 +22,9 @@
             <tr>
                 <td>@frais.User.Nom</td>
                 <td>@frais.User.Prenom</td>
-                <td>@(new FraisValidatiEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
+                <td>@(new FraisEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
                 <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
-                <td><a asp-page="/Frais/ValidateOrRefuse" asp-route-idFrai="@frais.ID_Frai"></a></td>
+                <td><a asp-page="/Frais/ValidateOrRefuse" asp-route-idFrai="@frais.ID_Frai">Manager</a></td>
             </tr>
         }
     </tbody>
