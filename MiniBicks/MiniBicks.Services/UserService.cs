@@ -50,6 +50,7 @@ namespace MiniBicks.Services
                 result = db.Users.Include(u => u.Responsable)
                                  .Include(u => u.ListeConge)
                                  .Include(u => u.Adresse)
+                                 .Include(u => u.ListeFrais)
                                  .FirstOrDefault(u => u.ID_User == idUser);
             }
             return result;

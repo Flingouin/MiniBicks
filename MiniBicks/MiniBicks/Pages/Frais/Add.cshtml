@@ -1,0 +1,26 @@
+﻿@page
+@using System.Linq;
+@using Entities.Enum;
+@model MiniBicks.Pages.Frais.AddModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Ajotuer une fiche de frais</h1>
+<form method="post">
+    @{ var a = Model.Frais;}
+    <span>Qui êtes vous ? </span>
+    <select asp-for="User.ID_User" asp-items="Model.ListeUser.Select(u => new SelectListItem { Text = u.NomPrenom, Value = u.ID_User.ToString()})">
+    </select>
+    <br />
+    <span>Type de frais</span>
+    <select asp-for="Frais.FraiEnum" asp-items="Html.GetEnumSelectList<FraiEnum>()"></select>
+    <br />
+    <span>Montant TTC ou Distance Km</span>
+    <input asp-for="Frais.MontantTTC" />
+    <br />
+    <span>Montant TVA</span>
+    <input asp-for="Frais.TVA" />
+    <input type="submit"/>
+</form>
+

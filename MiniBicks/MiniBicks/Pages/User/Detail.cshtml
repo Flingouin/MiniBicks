@@ -11,37 +11,67 @@
 <p>@Model.User.Adresse.NumeroRue @Model.User.Adresse.Rue</p>
 <p>@Model.User.Adresse.CodePostal @Model.User.Adresse.Ville</p>
 <p>Pays : @Model.User.Adresse.PaysEnum</p>
-@if(Model.User.Responsable != null)
+@if (Model.User.Responsable != null)
 {
     <p>Responsable : @Model.User.Responsable.Nom @Model.User.Responsable.Prenom</p>
 }
 @if (Model.User.ListeConge.Count != 0)
 {
-<table>
-    <thead>
-        <tr>
-            <th>Date début</th>
-            <th>Date Fin</th>
-            <th>Type du congé</th>
-            <th>Etat de la demande</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach (Entities.Conge conge in Model.User.ListeConge)
-        {
+    <table>
+        <thead>
             <tr>
-                <td>@conge.DateDebut.ToShortDateString()</td>
-                <td>@conge.DateFin.ToShortDateString()</td>
-                <td>@conge.TypeCongeEnum</td>
-                <td>@(new CongeValiditeEnumHelper().GetFriendlyEnum(conge.CongeValiditeEnum))</td>
-                <td><a asp-area="" asp-page="/Conge/ValideOrRefuseConge" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
+                <th>Date début</th>
+                <th>Date Fin</th>
+                <th>Type du congé</th>
+                <th>Etat de la demande</th>
+                <th></th>
             </tr>
-        }
+        </thead>
+        <tbody>
 
-    </tbody>
-</table>
+            @foreach (Entities.Conge conge in Model.User.ListeConge)
+            {
+                <tr>
+                    <td>@conge.DateDebut.ToShortDateString()</td>
+                    <td>@conge.DateFin.ToShortDateString()</td>
+                    <td>@conge.TypeCongeEnum</td>
+                    <td>@(new ValidatiEnumHelper().GetFriendlyEnum(conge.ValiditeEnum))</td>
+                    <td><a asp-area="" asp-page="/Conge/ValideOrRefuseConge" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+@if (Model.User.ListeFrais.Count != 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Type de frais</th>
+                <th>Montant TTC/Km</th>
+                <th>Montant TVA</th>
+                <th>Total</th>
+                <th>Etat de la demande</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Entities.Frai frais in Model.User.ListeFrais)
+            {
+                <tr>
+                    <td>@(new FraisValidatiEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
+                    <td>@frais.MontantTTC</td>
+                    <td>@frais.TVA</td>
+                    <td>@frais.TotalFrais</td>
+                    <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
+                    <td><a asp-area="" asp-page="/Frais/ValideOrRefuseFrais " asp-route-idConge="@frais.ID_Frai">Manager</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
 }
 
 <a asp-area="" asp-page="/Conge/Create" asp-route-idUser="@Model.User.ID_User">Demander un congé</a>

@@ -6,20 +6,20 @@ using MiniBicks.Entities.Enum;
 
 namespace MiniBicks.Helpers.Enum
 {
-    public class CongeValiditeEnumHelper
+    public class ValidatiEnumHelper
     {
-        public string GetFriendlyEnum(CongeValiditeEnum congeValiditeEnum)
+        public string GetFriendlyEnum(ValiditeEnum validiteEnum)
         {
             string result = string.Empty;
-            switch (congeValiditeEnum)
+            switch (validiteEnum)
             {
-                case CongeValiditeEnum.EnAttente:
+                case ValiditeEnum.EnAttente:
                     result = "En attente";
                     break;
-                case CongeValiditeEnum.Valide:
+                case ValiditeEnum.Valide:
                     result = "Validé";
                     break;
-                case CongeValiditeEnum.Refuse:
+                case ValiditeEnum.Refuse:
                     result = "Refusé";
                     break;
                 default:

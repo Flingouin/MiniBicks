@@ -26,6 +26,7 @@ namespace MiniBicks.Entities
         public virtual User Responsable { get; set; }
 
         public virtual List<Conge> ListeConge { get; set; }
+        public virtual List<Frai> ListeFrais { get; set; }
 
         [NotMapped]
         public string NomPrenom => string.Format("{0} {1}", Nom, Prenom);

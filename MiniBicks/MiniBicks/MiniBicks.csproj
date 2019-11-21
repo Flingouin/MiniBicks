@@ -27,8 +27,4 @@
     <ProjectReference Include="..\MiniBicks.Services\MiniBicks.Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Home\" />
-  </ItemGroup>
-
 </Project>

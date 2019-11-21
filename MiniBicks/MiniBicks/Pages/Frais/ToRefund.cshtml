@@ -1,0 +1,32 @@
+﻿@page
+@using Helpers.Enum
+@model MiniBicks.Pages.Frais.ToRefundModel
+@{
+    ViewData["Title"] = "ToRefund";
+}
+
+<h1>Demandes de remboursement </h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Type de frais</th>
+            <th>Etat de la demande</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Entities.Frai frais in Model.ListeFrais)
+        {
+            <tr>
+                <td>@frais.User.Nom</td>
+                <td>@frais.User.Prenom</td>
+                <td>@(new FraisValidatiEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
+                <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
+                <td><a asp-page="/Frais/ValidateOrRefuse" asp-route-idFrai="@frais.ID_Frai"></a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

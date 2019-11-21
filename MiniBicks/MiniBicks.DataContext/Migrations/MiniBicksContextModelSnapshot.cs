@@ -51,9 +51,6 @@ namespace MiniBicks.DataContext.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("CongeValiditeEnum")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("DateDebut")
                         .HasColumnType("datetime2");
 
@@ -67,6 +64,9 @@ namespace MiniBicks.DataContext.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TypeCongeEnum")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ValiditeEnum")
                         .HasColumnType("int");
 
                     b.HasKey("ID_Conge");
@@ -96,6 +96,34 @@ namespace MiniBicks.DataContext.Migrations
                     b.HasKey("ID_DureeConge");
 
                     b.ToTable("DureeConges");
+                });
+
+            modelBuilder.Entity("MiniBicks.Entities.Frai", b =>
+                {
+                    b.Property<Guid>("ID_Frai")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("FraiEnum")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ID_User")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("MontantTTC")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TVA")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ValidateEnum")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID_Frai");
+
+                    b.HasIndex("ID_User");
+
+                    b.ToTable("Frais");
                 });
 
             modelBuilder.Entity("MiniBicks.Entities.User", b =>
@@ -138,6 +166,15 @@ namespace MiniBicks.DataContext.Migrations
 
                     b.HasOne("MiniBicks.Entities.User", "User")
                         .WithMany("ListeConge")
+                        .HasForeignKey("ID_User")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MiniBicks.Entities.Frai", b =>
+                {
+                    b.HasOne("MiniBicks.Entities.User", "User")
+                        .WithMany("ListeFrais")
                         .HasForeignKey("ID_User")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

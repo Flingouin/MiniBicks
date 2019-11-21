@@ -13,7 +13,7 @@ namespace MiniBicks.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ID_Conge { get; set; }
         [Display(Name="Validation")]
-        public CongeValiditeEnum CongeValiditeEnum { get; set; } = CongeValiditeEnum.EnAttente;
+        public ValiditeEnum ValiditeEnum { get; set; } = ValiditeEnum.EnAttente;
         [Display(Name ="Type de congé")]
         public TypeCongeEnum TypeCongeEnum { get; set; }
         public DateTime DateDebut { get; set; }

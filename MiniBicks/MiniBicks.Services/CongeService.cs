@@ -10,11 +10,14 @@ namespace MiniBicks.Services
 {
     public class CongeService
     {
-        public bool Create(Conge conge)
+        public bool Create(Conge conge, Guid idUser)
         {
             bool result = false;
             using (var db = new MiniBicksContext())
             {
+                User user = db.Users.Include(u => u.Adresse).FirstOrDefault(u => u.ID_User == idUser);
+                DureeConge dureeConge = db.DureeConges.FirstOrDefault(dc => dc.TypeCongeEnum == conge.TypeCongeEnum && dc.PaysEnum == user.Adresse.PaysEnum);
+                conge.ID_DureeConge = dureeConge.ID_DureeConge;
                 db.Conges.Add(conge);
                 db.SaveChanges();
             }

@@ -152,7 +152,10 @@ D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Detail.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\User\Edit.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\Create.cshtml.g.cs
-D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\ValideOrRefuseConge.cshtml.g.cs
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.Helpers.dll
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\MiniBicks.Helpers.pdb
 D:\GitHub\MiniBicks\MiniBicks\MiniBicks\bin\Debug\netcoreapp3.0\AutoMapper.dll
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Frais\Index.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Frais\Add.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Frais\Stat.cshtml.g.cs
+D:\GitHub\MiniBicks\MiniBicks\MiniBicks\obj\Debug\netcoreapp3.0\Razor\Pages\Conge\ValideOrRefuse.cshtml.g.cs
