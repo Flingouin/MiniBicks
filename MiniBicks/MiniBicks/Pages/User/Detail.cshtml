@@ -7,10 +7,8 @@
 
 <h1>@Model.User.Nom @Model.User.Prenom</h1>
 <p>@Model.User.RoleEnum</p>
-<p>Adresse :</p>
 <p>@Model.User.Adresse.NumeroRue @Model.User.Adresse.Rue</p>
-<p>@Model.User.Adresse.CodePostal @Model.User.Adresse.Ville</p>
-<p>Pays : @Model.User.Adresse.PaysEnum</p>
+<p>@Model.User.Adresse.CodePostal @Model.User.Adresse.Ville  @Model.User.Adresse.PaysEnum</p>
 @if (Model.User.Responsable != null)
 {
     <p>Responsable : @Model.User.Responsable.Nom @Model.User.Responsable.Prenom</p>
@@ -36,7 +34,7 @@
                     <td>@conge.DateFin.ToShortDateString()</td>
                     <td>@conge.TypeCongeEnum</td>
                     <td>@(ValidatiEnumHelper.GetFriendlyEnum(conge.ValiditeEnum))</td>
-                    <td><a asp-area="" asp-page="/Conge/ValideOrRefuse" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
+                    <td><a class="myA" asp-area="" asp-page="/Conge/ValideOrRefuse" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
                 </tr>
             }
 
@@ -74,4 +72,4 @@
     </table>
 }
 
-<a asp-area="" asp-page="/Conge/Create" asp-route-idUser="@Model.User.ID_User">Demander un congé</a>
+<a  class="myA" asp-area="" asp-page="/Conge/Create" asp-route-idUser="@Model.User.ID_User">Demander un congé</a>

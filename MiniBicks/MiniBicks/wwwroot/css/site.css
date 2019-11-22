@@ -75,16 +75,39 @@ body {
 
 table {
     text-align: center;
-    margin: 5px 2px 2px 2px;
+    margin: 5px 2px 2px 2px; 
     border: 1px solid gray;
 }
 
-    table tr {
+    tr {
         border: 1px dotted gray;
     }
 
-        table th {
+
+        th {
             border: 1px dotted gray;
-            margin: 5px 2px 2px 2px;
-            
+            margin: 5px 10px 5px 10px !important;
         }
+
+
+    td {
+        border: 1px dotted gray;
+        padding: 5px 10px 5px 10px !important;
+    }
+
+.myA{
+    height:50px;
+    width:100%;
+    background-color:cornflowerblue;
+    color:white;
+    border-radius:4px;
+    padding:4px
+}
+
+a{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+    color:white;
+}

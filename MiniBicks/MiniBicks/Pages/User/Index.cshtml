@@ -1,6 +1,7 @@
 ﻿@page
 @model MiniBicks.Pages.User.IndexModel
 @using MiniBicks.Entities
+@using MiniBicks.Helpers.Enum;
 @{
     ViewData["Title"] = "Index";
 }
@@ -21,14 +22,14 @@
         {
         <tr>
             <td>@user.NomPrenom</td>
-            <td>@user.RoleEnum</td>
-            <td><a asp-area="" asp-page="/User/Detail" asp-route-idUser="@user.ID_User">Détail</a></td>
-            <td><a asp-area="" asp-page="/User/Edit" asp-route-idUser="@user.ID_User">Modifier</a></td>
-            <td><a asp-page="/User/Delete" asp-route-idUser="@user.ID_User">Supprimer</a></td>
+            <td>@RoleEnumHelper.GetFriendlyEnum(user.RoleEnum)</td>
+            <td><a class="myA" asp-area="" asp-page="/User/Detail" asp-route-idUser="@user.ID_User">Détail</a></td>
+            <td><a class="myA" asp-area="" asp-page="/User/Edit" asp-route-idUser="@user.ID_User">Modifier</a></td>
+            <td><a class="myA" asp-page="/User/Delete" asp-route-idUser="@user.ID_User">Supprimer</a></td>
         </tr>
         }
     </tbody>
     </table>
 
-    <a class="nav-link text-dark" asp-area="" asp-page="/User/Add">Créer un nouveau utilisateur</a>
+    <a class="myA" asp-area="" asp-page="/User/Add">Créer un nouveau utilisateur</a>
 

@@ -1,8 +1,11 @@
 ﻿@page
 @model MiniBicks.Pages.User.AddModel
 @using MiniBicks.Entities;
+@using MiniBicks.Entities.Enum;
+@using MiniBicks.Helpers.Enum;
 @{
     ViewData["Title"] = "Add";
+    var ListEnumRole = Enum.GetValues(typeof(RoleEnum)).Cast<RoleEnum>();
 }
 
 <h1>Add</h1>
@@ -32,7 +35,7 @@
     </select>
     <br />
     <label asp-for="User.RoleEnum">Role utilisateur</label>
-    <select asp-for="User.RoleEnum" asp-items="Html.GetEnumSelectList<Entities.Enum.RoleEnum>()">
+    <select asp-for="User.RoleEnum" asp-items="ListEnumRole.Select(ler => new SelectListItem() { Text = RoleEnumHelper.GetFriendlyEnum(ler), Value = ler.GetType().GetEnumName(ler)})">
         <option selected="selected" value=""></option>
     </select>
 

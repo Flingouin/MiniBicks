@@ -20,7 +20,7 @@
     <p>Date de la demande : @Model.Frais.DateDeFrais.ToShortDateString()</p>
     <p>Total des frais : @string.Format("{0:C2}",Model.Frais.TotalFrais)</p>
     <p>Type de frais : @(FraisEnumHelper.GetFriendlyEnum(Model.Frais.FraiEnum))</p>
-    <select asp-for="Frais.ValidateEnum" asp-items="ListEnumFraisValidite.Select(lefv => new SelectListItem() { Text = ValidatiEnumHelper.GetFriendlyEnum(lefv), Value = (string)lefv.GetType().GetEnumName(lefv)})"></select>
+    <select asp-for="Frais.ValidateEnum" asp-items="ListEnumFraisValidite.Select(lefv => new SelectListItem() { Text = ValidatiEnumHelper.GetFriendlyEnum(lefv), Value = lefv.GetType().GetEnumName(lefv)})"></select>
     <input type="submit" />
 </form>
 

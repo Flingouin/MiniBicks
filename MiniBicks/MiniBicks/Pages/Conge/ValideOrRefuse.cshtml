@@ -27,7 +27,7 @@
     <label asp-for="Conge.ValiditeEnum"></label>
     <select asp-for="Conge.ValiditeEnum" asp-items="ListEnumCongeValidite.Select(lecv => new SelectListItem() { 
                                                                                             Text = ValidatiEnumHelper.GetFriendlyEnum(lecv),
-                                                                                            Value = (string)lecv.GetType().GetEnumName(lecv), 
+                                                                                            Value = lecv.GetType().GetEnumName(lecv), 
                                                                                             Disabled = (lecv==ValiditeEnum.Valide && (DureeRestant <= 0 || DureeRestantApresValidation <= 0))})">
     </select>
 
