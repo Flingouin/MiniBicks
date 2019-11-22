@@ -1,9 +1,11 @@
 ﻿@page
 @using System.Linq;
 @using Entities.Enum;
+@using MiniBicks.Helpers.Enum;
 @model MiniBicks.Pages.Frais.AddModel
 @{
     ViewData["Title"] = "Add";
+    var ListEnumFraisValidite = Enum.GetValues(typeof(FraiEnum)).Cast<FraiEnum>();
 }
 
 <h1>Ajotuer une fiche de frais</h1>
@@ -14,7 +16,7 @@
     </select>
     <br />
     <span>Type de frais</span>
-    <select asp-for="Frais.FraiEnum" asp-items="Html.GetEnumSelectList<FraiEnum>()"></select>
+    <select asp-for="Frais.FraiEnum" asp-items="ListEnumFraisValidite.Select(lefv => new SelectListItem() { Text = FraisEnumHelper.GetFriendlyEnum(lefv), Value = (string)lefv.GetType().GetEnumName(lefv)})"></select>
     <br />
     <span>Montant TTC</span>
     <input asp-for="Frais.MontantTTC" />
