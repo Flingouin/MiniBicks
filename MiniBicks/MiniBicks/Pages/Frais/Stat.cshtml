@@ -19,7 +19,7 @@
         @foreach (KeyValuePair<FraiEnum, decimal> kvp in Model.DicoFrais)
         {
             <tr>
-                <td>@(new FraisEnumHelper().GetFriendlyEnum(kvp.Key))</td>
+                <td>@(FraisEnumHelper.GetFriendlyEnum(kvp.Key))</td>
                 <td>@(string.Format("{0:C2}",Math.Round(kvp.Value,2)))</td>
             </tr>
         }

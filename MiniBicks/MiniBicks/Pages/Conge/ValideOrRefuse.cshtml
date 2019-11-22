@@ -1,12 +1,13 @@
 ﻿@page
 @model MiniBicks.Pages.Conge.ValideOrRefuseCongeModel
 @using MiniBicks.Entities.Enum;
+@using MiniBicks.Helpers.Enum;
 @using System.Linq;
 @{
     ViewData["Title"] = "ValideOrRefuse";
     double DureeRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == Model.Conge.TypeCongeEnum).FirstOrDefault().Duree - Model.Conge.User.ListeConge.Where(c => c.TypeCongeEnum == Model.Conge.TypeCongeEnum && c.ValiditeEnum == ValiditeEnum.Valide).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
     double DureeRestantApresValidation = Math.Round(DureeRestant - Model.Conge.DureeDuConge, MidpointRounding.AwayFromZero);
-    List<string> ListEnumCongeValidite = Enum.GetNames(typeof(ValiditeEnum)).ToList();
+    var ListEnumCongeValidite = Enum.GetValues(typeof(ValiditeEnum)).Cast<ValiditeEnum>();
 }
 
 <h2>Validation du congé</h2>
@@ -24,7 +25,10 @@
     <p>Type de congé @Model.Conge.TypeCongeEnum</p>
     <br />
     <label asp-for="Conge.ValiditeEnum"></label>
-    <select asp-for="Conge.ValiditeEnum" asp-items="ListEnumCongeValidite.Select(lecv => new SelectListItem() { Text = lecv, Value = lecv, Disabled = (lecv==nameof(ValiditeEnum.Valide) && (DureeRestant <= 0 || DureeRestantApresValidation <= 0))})">
+    <select asp-for="Conge.ValiditeEnum" asp-items="ListEnumCongeValidite.Select(lecv => new SelectListItem() { 
+                                                                                            Text = ValidatiEnumHelper.GetFriendlyEnum(lecv),
+                                                                                            Value = (string)lecv.GetType().GetEnumName(lecv), 
+                                                                                            Disabled = (lecv==ValiditeEnum.Valide && (DureeRestant <= 0 || DureeRestantApresValidation <= 0))})">
     </select>
 
     <input type="submit" value="Enregistrer"><br />

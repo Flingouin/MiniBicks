@@ -20,8 +20,8 @@
         {
             <tr>
                 <td>@frais.User.NomPrenom</td>
-                <td>@(new FraisEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
-                <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
+                <td>@(FraisEnumHelper.GetFriendlyEnum(frais.FraiEnum))</td>
+                <td>@(ValidatiEnumHelper.GetFriendlyEnum(frais.ValidateEnum))</td>
                 <td><a asp-page="/Frais/ValidateOrRefuse" asp-route-idFrai="@frais.ID_Frai">Manager</a></td>
             </tr>
         }

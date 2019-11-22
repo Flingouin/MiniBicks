@@ -35,7 +35,7 @@
                     <td>@conge.DateDebut.ToShortDateString()</td>
                     <td>@conge.DateFin.ToShortDateString()</td>
                     <td>@conge.TypeCongeEnum</td>
-                    <td>@(new ValidatiEnumHelper().GetFriendlyEnum(conge.ValiditeEnum))</td>
+                    <td>@(ValidatiEnumHelper.GetFriendlyEnum(conge.ValiditeEnum))</td>
                     <td><a asp-area="" asp-page="/Conge/ValideOrRefuse" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
                 </tr>
             }
@@ -54,7 +54,6 @@
                 <th>Montant TVA</th>
                 <th>Total</th>
                 <th>Etat de la demande</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -62,13 +61,12 @@
             @foreach (Entities.Frai frais in Model.User.ListeFrais)
             {
                 <tr>
-                    <td>@(new FraisEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
+                    <td>@(FraisEnumHelper.GetFriendlyEnum(frais.FraiEnum))</td>
                     <td>@frais.MontantTTC</td>
                     <td>@frais.FraisKilometrique</td>
                     <td>@frais.TVA</td>
                     <td>@frais.TotalFrais</td>
-                    <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
-                    <td><a asp-area="" asp-page="/Frais/ValideOrRefuse " asp-route-idConge="@frais.ID_Frai">Manager</a></td>
+                    <td>@(ValidatiEnumHelper.GetFriendlyEnum(frais.ValidateEnum))</td>
                 </tr>
             }
 

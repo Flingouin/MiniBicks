@@ -6,9 +6,9 @@ using MiniBicks.Entities.Enum;
 
 namespace MiniBicks.Helpers.Enum
 {
-    public class ValidatiEnumHelper
+    public static class ValidatiEnumHelper
     {
-        public string GetFriendlyEnum(ValiditeEnum validiteEnum)
+        public static string GetFriendlyEnum(ValiditeEnum validiteEnum)
         {
             string result = string.Empty;
             switch (validiteEnum)
