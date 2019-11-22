@@ -83,8 +83,8 @@ table {
         border: 1px dotted gray;
     }
 
-        table tr td {
+        table th {
             border: 1px dotted gray;
             margin: 5px 2px 2px 2px;
-            ;
+            
         }

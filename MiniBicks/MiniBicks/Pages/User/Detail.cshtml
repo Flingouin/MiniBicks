@@ -36,7 +36,7 @@
                     <td>@conge.DateFin.ToShortDateString()</td>
                     <td>@conge.TypeCongeEnum</td>
                     <td>@(new ValidatiEnumHelper().GetFriendlyEnum(conge.ValiditeEnum))</td>
-                    <td><a asp-area="" asp-page="/Conge/ValideOrRefuseConge" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
+                    <td><a asp-area="" asp-page="/Conge/ValideOrRefuse" asp-route-idConge="@conge.ID_Conge">Manager</a></td>
                 </tr>
             }
 
@@ -68,7 +68,7 @@
                     <td>@frais.TVA</td>
                     <td>@frais.TotalFrais</td>
                     <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
-                    <td><a asp-area="" asp-page="/Frais/ValideOrRefuseFrais " asp-route-idConge="@frais.ID_Frai">Manager</a></td>
+                    <td><a asp-area="" asp-page="/Frais/ValideOrRefuse " asp-route-idConge="@frais.ID_Frai">Manager</a></td>
                 </tr>
             }
 

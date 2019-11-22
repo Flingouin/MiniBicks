@@ -6,8 +6,8 @@ namespace MiniBicks.Entities.Enum
 {
     public enum ValiditeEnum
     {
-        EnAttente = 1,
-        Valide = 2,
-        Refuse = 3
+        EnAttente = 0,
+        Valide = 1,
+        Refuse = 2
     }
 }
