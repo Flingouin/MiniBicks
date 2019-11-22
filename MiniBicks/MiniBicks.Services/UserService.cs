@@ -15,7 +15,7 @@ namespace MiniBicks.Services
             List<User> result = new List<User>();
             using (var db = new MiniBicksContext())
             {
-                result = db.Users.ToList();
+                result = db.Users.OrderBy(u=>u.Nom).ToList();
             }
             return result;
         }

@@ -49,7 +49,8 @@
         <thead>
             <tr>
                 <th>Type de frais</th>
-                <th>Montant TTC/Km</th>
+                <th>Montant TTC</th>
+                <th>Distance en Km</th>
                 <th>Montant TVA</th>
                 <th>Total</th>
                 <th>Etat de la demande</th>
@@ -63,6 +64,7 @@
                 <tr>
                     <td>@(new FraisEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
                     <td>@frais.MontantTTC</td>
+                    <td>@frais.FraisKilometrique</td>
                     <td>@frais.TVA</td>
                     <td>@frais.TotalFrais</td>
                     <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>

@@ -69,7 +69,7 @@ namespace MiniBicks.Services
             {
                 foreach(FraiEnum fraiEnum in (FraiEnum[])Enum.GetValues(typeof(FraiEnum)))
                 {
-                    decimal sommeFraiByEnum = db.Frais.Where(f => f.FraiEnum == fraiEnum && f.DateDeFrais < DateTime.Now.AddMonths(-1)).Sum(f => f.MontantTTC + f.FraisKilometrique*0.33m);
+                    decimal sommeFraiByEnum = db.Frais.Where(f => f.ValidateEnum == ValiditeEnum.Valide && f.FraiEnum == fraiEnum && f.DateDeFrais < DateTime.Now.AddMonths(-1)).Sum(f =>f.MontantTTC + f.FraisKilometrique * 0.33m);
                     result.Add(fraiEnum,sommeFraiByEnum);
                 }
             }
@@ -84,7 +84,7 @@ namespace MiniBicks.Services
                 List<User> listeUser = db.Users.ToList();
                 foreach (User user in listeUser)
                 {
-                    decimal sommeFraiByEnum = db.Frais.Where(f => f.ID_User == user.ID_User && f.DateDeFrais < DateTime.Now.AddMonths(-1)).Sum(f => f.MontantTTC + f.FraisKilometrique * 0.33m);
+                    decimal sommeFraiByEnum = db.Frais.Where(f => f.ValidateEnum == ValiditeEnum.Valide &&f.ID_User == user.ID_User && f.DateDeFrais < DateTime.Now.AddMonths(-1)).Sum(f => f.MontantTTC + f.FraisKilometrique * 0.33m);
                     result.Add(user.NomPrenom, sommeFraiByEnum);
                 }
             }

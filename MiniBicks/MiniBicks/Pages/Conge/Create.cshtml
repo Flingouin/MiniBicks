@@ -12,7 +12,6 @@
     double NaissanceRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Naissance).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Naissance && c.ValiditeEnum == ValiditeEnum.Valide).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
     double MaterniteRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Maternite).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Maternite && c.ValiditeEnum == ValiditeEnum.Valide).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
     double PaterniteRestant = Math.Round(Model.ListeDureeConge.Where(dc => dc.TypeCongeEnum == TypeCongeEnum.Paternite).FirstOrDefault().Duree - Model.User.ListeConge.Where(c => c.TypeCongeEnum == TypeCongeEnum.Paternite && c.ValiditeEnum == ValiditeEnum.Valide).Sum(c => (c.DateFin - c.DateDebut).TotalDays), MidpointRounding.AwayFromZero);
-
 }
 <h1>Demande de conge</h1>
 <p>Jours CP restant : @CPRestant</p>

@@ -9,8 +9,7 @@
 <table>
     <thead>
         <tr>
-            <th>Nom</th>
-            <th>Prenom</th>
+            <th>Personne</th>
             <th>Type de frais</th>
             <th>Etat de la demande</th>
             <th></th>
@@ -20,8 +19,7 @@
         @foreach (Entities.Frai frais in Model.ListeFrais)
         {
             <tr>
-                <td>@frais.User.Nom</td>
-                <td>@frais.User.Prenom</td>
+                <td>@frais.User.NomPrenom</td>
                 <td>@(new FraisEnumHelper().GetFriendlyEnum(frais.FraiEnum))</td>
                 <td>@(new ValidatiEnumHelper().GetFriendlyEnum(frais.ValidateEnum))</td>
                 <td><a asp-page="/Frais/ValidateOrRefuse" asp-route-idFrai="@frais.ID_Frai">Manager</a></td>
